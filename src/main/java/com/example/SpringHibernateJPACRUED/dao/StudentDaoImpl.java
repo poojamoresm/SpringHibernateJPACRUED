@@ -14,12 +14,15 @@ public class StudentDaoImpl implements StudentDao{
 
     //define field for entity manager
     private EntityManager entityManager;
-    //inject enetity manager using constructor
 
+
+    //inject enetity manager using constructor
     @Autowired
     public StudentDaoImpl(EntityManager entityManager){
         this.entityManager = entityManager;
     }
+
+
     //implement save method
     @Override
     @Transactional
@@ -38,8 +41,6 @@ public class StudentDaoImpl implements StudentDao{
         TypedQuery<Student> studentTypedQuery = entityManager.createQuery("FROM Student order by last_name asc",Student.class);
 
         //return result
-
-
         return studentTypedQuery.getResultList();
     }
 
