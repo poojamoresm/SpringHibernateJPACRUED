@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface StudentDao {
 
-    void save(Student student);
+    Student save(Student student);
     Student FindById(Integer id);
 
     List<Student> findAllStudent();

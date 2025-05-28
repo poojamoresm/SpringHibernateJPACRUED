@@ -17,7 +17,7 @@ public class SpringHibernateJpacruedApplication {
 		SpringApplication.run(SpringHibernateJpacruedApplication.class, args);
 	}
 
-	@Bean
+	/*@Bean
 	public CommandLineRunner runner(StudentDao studentDao){
 return runner->{
 
@@ -129,5 +129,5 @@ return runner->{
 		System.out.println("Student data is save :-"+student.getId());
 	}
 
-
+*/
 }
